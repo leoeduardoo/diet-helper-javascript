@@ -1,5 +1,5 @@
 {
-  "name": "diet-helper-javascript-study",
+  "name": "diet-helper-javascript",
   "version": "1.0.0",
   "description": "Simple CRUD application to place what I have got from javascript learning.",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leoeduardoo/diet-helper-javascript-study.git"
+    "url": "git+https://github.com/leoeduardoo/diet-helper-javascript.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leoeduardoo/diet-helper-javascript-study/issues"
+    "url": "https://github.com/leoeduardoo/diet-helper-javascript/issues"
   },
-  "homepage": "https://github.com/leoeduardoo/diet-helper-javascript-study#readme",
+  "homepage": "https://github.com/leoeduardoo/diet-helper-javascript#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
