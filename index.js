@@ -14,6 +14,9 @@ app.use(express.json());
 const userRoutes = require('./routes/userRoutes');
 app.use('/user', userRoutes);
 
+const mealRoutes = require('./routes/mealRoutes');
+app.use('/meal', mealRoutes);
+
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = process.env.DB_PASSWORD;
 
