@@ -21,10 +21,11 @@ router.get('/', async (req, res) => {
             const food = response.data.foods[index];
             const name = food.food_name;
             const quantity = food.serving_qty;
+            const grams = food.serving_weight_grams;
             const carbohydrate = food.nf_total_carbohydrate;
             const protein = food.nf_protein;
             const fat = food.nf_total_fat;
-            foods.push({ name, quantity, carbohydrate, protein, fat });
+            foods.push({ name, quantity, grams, carbohydrate, protein, fat });
         }
 
         res.status(201).json(foods);
