@@ -3,18 +3,21 @@ const Meal = require('../model/Meal');
 
 router.post('/', async (req, res) => {
 
-    const { description, ingredients } = req.body;
+    const { description, ingredients, meal_type, week_day, user_id } = req.body;
 
-    const meal = { description, ingredients };
+    const meal = new Meal({ description, ingredients, meal_type, week_day, user_id });
 
     try {
         await Meal.create(meal);
         res.status(201).json({ message: 'Meal created!' });
     } catch (error) {
-        res.status(500).json({ error: error });
+        if (error.message === 'Meal validation failed: user_id: Invalid ID(s)') {
+            res.status(422).json({ message: 'User not found!' });
+        } else {
+            res.status(500).json({ error: error });
+        }
     }
 });
-
 
 router.get('/', async (req, res) => {
     try {
@@ -49,9 +52,9 @@ router.patch('/:id', async (req, res) => {
 
     try {
 
-        const { description, ingredients } = req.body;
+        const { description, ingredients, meal_type, week_day } = req.body;
 
-        const meal = { description, ingredients };
+        const meal = { description, ingredients, meal_type, week_day };
 
         const updatedMeal = await Meal.updateOne({ _id: id }, meal);
 
