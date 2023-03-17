@@ -191,7 +191,18 @@ async function mondayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Monday`)).json();
+
+        const remainingMacronutrientsMonday = {
+            "remaining_carbohydrate": 1.2800000000000153,
+            "remaining_protein": -31.829999999999984,
+            "remaining_fat": 15.239999999999995
+        }
+        //await (await fetch(`http://localhost:3000/nutrition/${userId}/Monday`)).json();
+
+        if (remainingMacronutrientsMonday.remaining_carbohydrate < 0 || remainingMacronutrientsMonday.remaining_protein < 0 || remainingMacronutrientsMonday.remaining_fat < 0) {
+            spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
+        }
+
         spanDetails.textContent = "remaining macronutrients:";
         spanDetails.textContent += "\n";
         spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsMonday.remaining_carbohydrate).toPrecision(3)}`;
@@ -209,14 +220,24 @@ async function tuesdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Tuesday`)).json();
+        const remainingMacronutrientsTuesday = {
+            "remaining_carbohydrate": 1.2800000000000153,
+            "remaining_protein": 31.829999999999984,
+            "remaining_fat": 15.239999999999995
+        }
+        //await (await fetch(`http://localhost:3000/nutrition/${userId}/Tuesday`)).json();
+
+        if (remainingMacronutrientsTuesday.remaining_carbohydrate < 0 || remainingMacronutrientsTuesday.remaining_protein < 0 || remainingMacronutrientsTuesday.remaining_fat < 0) {
+            spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
+        }
+
         spanDetails.textContent = "remaining macronutrients:";
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsMonday.remaining_carbohydrate).toPrecision(3)}`;
+        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsTuesday.remaining_carbohydrate).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsMonday.remaining_protein).toPrecision(3)}`;
+        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsTuesday.remaining_protein).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsMonday.remaining_fat).toPrecision(3)}`;
+        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsTuesday.remaining_fat).toPrecision(3)}`;
     }
 }
 
@@ -227,14 +248,24 @@ async function wednesdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Wednesday`)).json();
+        const remainingMacronutrientsWednesday = {
+            "remaining_carbohydrate": 1.2800000000000153,
+            "remaining_protein": 31.829999999999984,
+            "remaining_fat": 15.239999999999995
+        }
+        //const remainingMacronutrientsWednesday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Wednesday`)).json();
+
+        if (remainingMacronutrientsWednesday.remaining_carbohydrate < 0 || remainingMacronutrientsWednesday.remaining_protein < 0 || remainingMacronutrientsWednesday.remaining_fat < 0) {
+            spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
+        }
+
         spanDetails.textContent = "remaining macronutrients:";
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsMonday.remaining_carbohydrate).toPrecision(3)}`;
+        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsWednesday.remaining_carbohydrate).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsMonday.remaining_protein).toPrecision(3)}`;
+        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsWednesday.remaining_protein).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsMonday.remaining_fat).toPrecision(3)}`;
+        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsWednesday.remaining_fat).toPrecision(3)}`;
     }
 }
 
@@ -245,14 +276,24 @@ async function thursdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Thursday`)).json();
+        const remainingMacronutrientsThursday = {
+            "remaining_carbohydrate": 1.2800000000000153,
+            "remaining_protein": 31.829999999999984,
+            "remaining_fat": 15.239999999999995
+        }
+        //const remainingMacronutrientsThursday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Thursday`)).json();
+
+        if (remainingMacronutrientsThursday.remaining_carbohydrate < 0 || remainingMacronutrientsThursday.remaining_protein < 0 || remainingMacronutrientsThursday.remaining_fat < 0) {
+            spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
+        }
+
         spanDetails.textContent = "remaining macronutrients:";
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsMonday.remaining_carbohydrate).toPrecision(3)}`;
+        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsThursday.remaining_carbohydrate).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsMonday.remaining_protein).toPrecision(3)}`;
+        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsThursday.remaining_protein).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsMonday.remaining_fat).toPrecision(3)}`;
+        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsThursday.remaining_fat).toPrecision(3)}`;
     }
 }
 
@@ -263,14 +304,24 @@ async function fridayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Friday`)).json();
+        const remainingMacronutrientsFriday = {
+            "remaining_carbohydrate": 1.2800000000000153,
+            "remaining_protein": 31.829999999999984,
+            "remaining_fat": 15.239999999999995
+        }
+        //const remainingMacronutrientsFriday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Friday`)).json();
+
+        if (remainingMacronutrientsFriday.remaining_carbohydrate < 0 || remainingMacronutrientsFriday.remaining_protein < 0 || remainingMacronutrientsFriday.remaining_fat < 0) {
+            spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
+        }
+
         spanDetails.textContent = "remaining macronutrients:";
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsMonday.remaining_carbohydrate).toPrecision(3)}`;
+        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsFriday.remaining_carbohydrate).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsMonday.remaining_protein).toPrecision(3)}`;
+        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsFriday.remaining_protein).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsMonday.remaining_fat).toPrecision(3)}`;
+        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsFriday.remaining_fat).toPrecision(3)}`;
     }
 }
 
@@ -281,14 +332,24 @@ async function saturdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Saturday`)).json();
+        const remainingMacronutrientsSaturday = {
+            "remaining_carbohydrate": 1.2800000000000153,
+            "remaining_protein": 31.829999999999984,
+            "remaining_fat": 15.239999999999995
+        }
+        //const remainingMacronutrientsSaturday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Saturday`)).json();
+
+        if (remainingMacronutrientsSaturday.remaining_carbohydrate < 0 || remainingMacronutrientsSaturday.remaining_protein < 0 || remainingMacronutrientsSaturday.remaining_fat < 0) {
+            spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
+        }
+
         spanDetails.textContent = "remaining macronutrients:";
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsMonday.remaining_carbohydrate).toPrecision(3)}`;
+        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsSaturday.remaining_carbohydrate).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsMonday.remaining_protein).toPrecision(3)}`;
+        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsSaturday.remaining_protein).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsMonday.remaining_fat).toPrecision(3)}`;
+        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsSaturday.remaining_fat).toPrecision(3)}`;
     }
 }
 
@@ -299,14 +360,24 @@ async function sundayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Sunday`)).json();
+        const remainingMacronutrientsSunday = {
+            "remaining_carbohydrate": 1.2800000000000153,
+            "remaining_protein": 31.829999999999984,
+            "remaining_fat": -15.239999999999995
+        }
+        //const remainingMacronutrientsSunday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Sunday`)).json();
+
+        if (remainingMacronutrientsSunday.remaining_carbohydrate < 0 || remainingMacronutrientsSunday.remaining_protein < 0 || remainingMacronutrientsSunday.remaining_fat < 0) {
+            spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
+        }
+
         spanDetails.textContent = "remaining macronutrients:";
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsMonday.remaining_carbohydrate).toPrecision(3)}`;
+        spanDetails.textContent += `carbohydrate: ${parseFloat(remainingMacronutrientsSunday.remaining_carbohydrate).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsMonday.remaining_protein).toPrecision(3)}`;
+        spanDetails.textContent += `proteyn: ${parseFloat(remainingMacronutrientsSunday.remaining_protein).toPrecision(3)}`;
         spanDetails.textContent += "\n";
-        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsMonday.remaining_fat).toPrecision(3)}`;
+        spanDetails.textContent += `fat: ${parseFloat(remainingMacronutrientsSunday.remaining_fat).toPrecision(3)}`;
     }
 }
 
