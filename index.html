@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getUsersAndFillSel()">
+    <header>
+        <h1>Diet Helper</h1>
+    </header>
+    <section>
+        <div id="div-your-week">
+            <p>
+                &#127947; STAY FOCUSED &#127947;
+            </p>
+            <div>
+                <p>
+                    <select name="sel-user" id="sel-user" onclick="insertDataWeekTable()">
+                        <option value="" selected disabled hidden>Choose user</option>
+                    </select>
+                </p>
+                <p>
+                    <label id="lab-user-id" hidden></label>
+                </p>
+
+            </div>
+        </div>
+
+        <div id="div-week-table">
+            <table id="tb-week" style="width:100%">
+                <tr>
+                    <th class='has-details' onmouseover="mondayRemainingMacronutrientsOver()">
+                        Monday
+                        <span class="details-monday" id="details-monday"></span>
+                    </th>
+                    <th class='has-details' onmouseover="tuesdayRemainingMacronutrientsOver()">
+                        Tuesday
+                        <span class="details-tuesday" id="details-tuesday"></span>
+                    </th>
+                    <th class='has-details' onmouseover="wednesdayRemainingMacronutrientsOver()">
+                        Wednesday
+                        <span class="details-wednesday" id="details-wednesday"></span>
+                    </th>
+                    <th class='has-details' onmouseover="thursdayRemainingMacronutrientsOver()">
+                        Thursday
+                        <span class="details-thursday" id="details-thursday"></span>
+                    </th>
+                    <th class='has-details' onmouseover="fridayRemainingMacronutrientsOver()">
+                        Friday
+                        <span class="details-friday" id="details-friday"></span>
+                    </th>
+                    <th class='has-details' onmouseover="saturdayRemainingMacronutrientsOver()">
+                        Saturday
+                        <span class="details-saturday" id="details-saturday"></span>
+                    </th>
+                    <th class='has-details' onmouseover="sundayRemainingMacronutrientsOver()">
+                        Sunday
+                        <span class="details-sunday" id="details-sunday"></span>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="table.js"></script>
+</body>
+
+<footer>
+    <p>
+    <p>
+        Simple CRUD application to place what I have got from javascript learning
+    </p>
+    <p>
+        &copy; Léo
+    </p>
+    <p>
+        <a href="https://github.com/leoeduardoo/diet-helper-javascript">Github</a>
+    </p>
+    </p>
+</footer>
+
+</html>
