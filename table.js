@@ -415,3 +415,8 @@ function updateLabelUserId(users, labUserId) {
         }
     }
 }
+
+// opens create user popup window
+function createUser() {
+    window.open('./createUser.html', 'popUpWindow', "fullscreen=yes");
+}

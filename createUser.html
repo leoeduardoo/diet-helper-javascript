@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <link rel="stylesheet" href="createUser.css">
+</head>
+
+<body>
+    <header>
+        <h1>Diet Helper</h1>
+    </header>
+    <section>
+        <div id="div-create-user">
+            <p>
+                &#127947; CREATE USER &#127947;
+            </p>
+        </div>
+
+        <div class="container">
+            <form>
+                <fieldset>
+
+                    <legend>User Details</legend>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="input-name">Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="input-name" name="input-name" placeholder="User name...">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="input-age">Age</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="number" id="input-age" name="input-age" placeholder="User age...">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Macronutrients</label>
+                        </div>
+                        <div class="col-75">
+                            Carbohydrate:
+                            <input type="number" id="input-carbohydrate" name="input-carbohydrate"
+                                placeholder="grams / day">
+
+                            Protein:
+                            <input type="number" id="input-protein" name="input-protein" placeholder="grams / day">
+
+                            Fat:
+                            <input type="number" id="input-fat" name="input-fat" placeholder="grams / day">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="input-age">Gender</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="radio" id="input-gender-male" name="input-gender" value="M">
+                            <label for="input-gender-male">M</label>
+                            <input type="radio" id="input-gender-female" name="input-gender" value="F">
+                            <label for="input-gender-female">F</label>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <input type="submit" value="create" onclick="create()">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </section>
+    <script src="createUser.js"></script>
+</body>
+
+<footer>
+    <p>
+    <p>
+        Simple CRUD application to place what I have got from javascript learning
+    </p>
+    <p>
+        &copy; Léo
+    </p>
+    <p>
+        <a href="https://github.com/leoeduardoo/diet-helper-javascript">Github</a>
+    </p>
+    </p>
+</footer>
+
+</html>

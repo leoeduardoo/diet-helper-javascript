@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diet Helper</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
 </head>
 
 <body onload="getUsersAndFillSel()">
@@ -23,6 +23,7 @@
                     <select name="sel-user" id="sel-user" onclick="insertDataWeekTable()">
                         <option value="" selected disabled hidden>Choose user</option>
                     </select>
+                    <input type="button" value="create user" id="btn-create-user" onclick="createUser()">
                 </p>
                 <p>
                     <label id="lab-user-id" hidden></label>
