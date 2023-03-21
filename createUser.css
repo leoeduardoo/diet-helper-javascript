@@ -1,0 +1,128 @@
+body {
+  background: rgb(57, 57, 90);
+  font: normal 20px Arial;
+}
+
+header {
+  color: white;
+  text-align: center;
+}
+
+div#div-create-user {
+  text-align: center;
+  font-weight: bold;
+}
+
+section {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 1200px;
+  margin: auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(142, 135, 184);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(215, 213, 228);
+  background-color: transparent;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=number] {
+  width: 15%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: rgb(57, 57, 90);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(136, 136, 161);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .col-25,
+  .col-75,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
