@@ -26,11 +26,7 @@ async function create() {
         },
         body: JSON.stringify(body)
     })
-        .then(() => {
-            window.alert("User created successfully!");
-        })
-        .catch((error) => {
-            window.alert("Error creating user!");
+        .then((response) => {
+            return response.json();
         });
-
 }

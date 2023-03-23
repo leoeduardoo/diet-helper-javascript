@@ -179,3 +179,24 @@ td {
 table {
   border-collapse: collapse;
 }
+
+select {
+  width: 15%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=button] {
+  background-color: rgb(57, 57, 90);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: rgb(136, 136, 161);
+}

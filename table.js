@@ -191,15 +191,11 @@ async function mondayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
+        const remainingMacronutrientsMonday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Monday`)).json();
 
-        const remainingMacronutrientsMonday = {
-            "remaining_carbohydrate": 1.2800000000000153,
-            "remaining_protein": -31.829999999999984,
-            "remaining_fat": 15.239999999999995
-        }
-        //await (await fetch(`http://localhost:3000/nutrition/${userId}/Monday`)).json();
+        spanDetails.style.backgroundColor = "rgb(204, 204, 221)";
 
-        if (remainingMacronutrientsMonday.remaining_carbohydrate < 0 || remainingMacronutrientsMonday.remaining_protein < 0 || remainingMacronutrientsMonday.remaining_fat < 0) {
+        if (Number(remainingMacronutrientsMonday.remaining_carbohydrate) < 0 || Number(remainingMacronutrientsMonday.remaining_protein) < 0 || Number(remainingMacronutrientsMonday.remaining_fat) < 0) {
             spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
         }
 
@@ -220,14 +216,11 @@ async function tuesdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsTuesday = {
-            "remaining_carbohydrate": 1.2800000000000153,
-            "remaining_protein": 31.829999999999984,
-            "remaining_fat": 15.239999999999995
-        }
-        //await (await fetch(`http://localhost:3000/nutrition/${userId}/Tuesday`)).json();
+        const remainingMacronutrientsTuesday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Tuesday`)).json();
 
-        if (remainingMacronutrientsTuesday.remaining_carbohydrate < 0 || remainingMacronutrientsTuesday.remaining_protein < 0 || remainingMacronutrientsTuesday.remaining_fat < 0) {
+        spanDetails.style.backgroundColor = "rgb(204, 204, 221)";
+
+        if (Number(remainingMacronutrientsTuesday.remaining_carbohydrate) < 0 || Number(remainingMacronutrientsTuesday.remaining_protein) < 0 || Number(remainingMacronutrientsTuesday.remaining_fat) < 0) {
             spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
         }
 
@@ -248,12 +241,9 @@ async function wednesdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsWednesday = {
-            "remaining_carbohydrate": 1.2800000000000153,
-            "remaining_protein": 31.829999999999984,
-            "remaining_fat": 15.239999999999995
-        }
-        //const remainingMacronutrientsWednesday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Wednesday`)).json();
+        const remainingMacronutrientsWednesday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Wednesday`)).json();
+
+        spanDetails.style.backgroundColor = "rgb(204, 204, 221)";
 
         if (remainingMacronutrientsWednesday.remaining_carbohydrate < 0 || remainingMacronutrientsWednesday.remaining_protein < 0 || remainingMacronutrientsWednesday.remaining_fat < 0) {
             spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
@@ -276,12 +266,9 @@ async function thursdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsThursday = {
-            "remaining_carbohydrate": 1.2800000000000153,
-            "remaining_protein": 31.829999999999984,
-            "remaining_fat": 15.239999999999995
-        }
-        //const remainingMacronutrientsThursday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Thursday`)).json();
+        const remainingMacronutrientsThursday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Thursday`)).json();
+
+        spanDetails.style.backgroundColor = "rgb(204, 204, 221)";
 
         if (remainingMacronutrientsThursday.remaining_carbohydrate < 0 || remainingMacronutrientsThursday.remaining_protein < 0 || remainingMacronutrientsThursday.remaining_fat < 0) {
             spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
@@ -304,12 +291,9 @@ async function fridayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsFriday = {
-            "remaining_carbohydrate": 1.2800000000000153,
-            "remaining_protein": 31.829999999999984,
-            "remaining_fat": 15.239999999999995
-        }
-        //const remainingMacronutrientsFriday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Friday`)).json();
+        const remainingMacronutrientsFriday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Friday`)).json();
+
+        spanDetails.style.backgroundColor = "rgb(204, 204, 221)";
 
         if (remainingMacronutrientsFriday.remaining_carbohydrate < 0 || remainingMacronutrientsFriday.remaining_protein < 0 || remainingMacronutrientsFriday.remaining_fat < 0) {
             spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
@@ -332,12 +316,9 @@ async function saturdayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsSaturday = {
-            "remaining_carbohydrate": 1.2800000000000153,
-            "remaining_protein": 31.829999999999984,
-            "remaining_fat": 15.239999999999995
-        }
-        //const remainingMacronutrientsSaturday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Saturday`)).json();
+        const remainingMacronutrientsSaturday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Saturday`)).json();
+
+        spanDetails.style.backgroundColor = "rgb(204, 204, 221)";
 
         if (remainingMacronutrientsSaturday.remaining_carbohydrate < 0 || remainingMacronutrientsSaturday.remaining_protein < 0 || remainingMacronutrientsSaturday.remaining_fat < 0) {
             spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
@@ -360,12 +341,9 @@ async function sundayRemainingMacronutrientsOver() {
     const userId = labUserId.textContent;
 
     if (selUser.value !== "") {
-        const remainingMacronutrientsSunday = {
-            "remaining_carbohydrate": 1.2800000000000153,
-            "remaining_protein": 31.829999999999984,
-            "remaining_fat": -15.239999999999995
-        }
-        //const remainingMacronutrientsSunday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Sunday`)).json();
+        const remainingMacronutrientsSunday = await (await fetch(`http://localhost:3000/nutrition/${userId}/Sunday`)).json();
+
+        spanDetails.style.backgroundColor = "rgb(204, 204, 221)";
 
         if (remainingMacronutrientsSunday.remaining_carbohydrate < 0 || remainingMacronutrientsSunday.remaining_protein < 0 || remainingMacronutrientsSunday.remaining_fat < 0) {
             spanDetails.style.backgroundColor = "rgb(236, 191, 191)";
